@@ -1,0 +1,7 @@
+App\Entity\Article:
+  exclusion_policy: none
+  properties:
+    id:
+      groups: ['article']
+    title:
+      groups: ['article']
