@@ -3,13 +3,14 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-         bat 'composer install --no-interaction
-              composer require --dev symfony/phpunit-bridge '
+        bat "composer install --no-interaction"
+        bat "composer require --dev symfony/phpunit-bridge"
       }
     }
     stage('Test'){
       steps{
-         bat "phpunit"
+        bat "cd bin"
+        bat "phpunit"
       }
     }
   }
