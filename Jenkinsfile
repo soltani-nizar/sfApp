@@ -10,6 +10,7 @@ pipeline{
     stage('Test'){
       steps{
         bat "cd bin"
+        bat 'echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"'
         bat "phpunit"
       }
     }
