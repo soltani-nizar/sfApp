@@ -13,5 +13,10 @@ pipeline{
         bat "php bin/phpunit"
       }
     }
+    stage('Nexus'){
+      steps{
+        bat 'mvn deploy:deploy-file -DgroupId=sf.apps -DartifactId=sfApp -Dversion=2.0 -DgeneratePom=false -Dpackaging=zip -DrepositoryId=nexus_app -Durl=http://localhost:8081/repository/nexus_app/ -Dfile=target/project.zip'
+      }
+    }
   }
 }
