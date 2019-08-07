@@ -12,5 +12,12 @@ pipeline{
         bat "php bin/phpunit"
       }
     }
+    stage('SonarQube'){
+      steps{
+        echo "=== Starting SonarQube Analysis ==="
+        bat "sonar-scanner"
+        echo "=== Ending SonarQube Analysis ==="
+      }
+    }
   }
 }
