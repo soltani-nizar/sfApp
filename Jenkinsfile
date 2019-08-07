@@ -1,5 +1,8 @@
 pipeline{
   agent any
+  tools {
+    sonar-scanner 'SonarQube'
+  }
   stages{
     stage('Build'){
       steps{
