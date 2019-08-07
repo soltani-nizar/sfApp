@@ -19,7 +19,7 @@ pipeline{
     }
     stage('Nexus'){
       steps{
-        bat 'mvn deploy:deploy-file -DgroupId=sf.apps -DartifactId=sfApp -Dversion=1.0 -DgeneratePom=false -Dpackaging=zip -DrepositoryId=symfony_apps -Durl=http://localhost:8081/repository/symfony_apps/ -Dfile=target/project.zip'
+        bat 'mvn deploy:deploy-file -DgroupId=sf.apps -DartifactId=sfApp -Dversion=1.1 -DgeneratePom=false -Dpackaging=zip -DrepositoryId=symfony_apps -Durl=http://localhost:8081/repository/symfony_apps/ -Dfile=target/project.zip'
       }
     }
   }
