@@ -15,7 +15,7 @@ pipeline{
     stage('SonarQube'){
       steps{
         echo "=== Starting SonarQube Analysis ==="
-        bat '"C:/Program Files (x86)/sonar-scanner-4.0.0.1744-windows/bin" sonar-scanner'
+        bat "sonar-scanner"
         echo "=== Ending SonarQube Analysis ==="
       }
     }
