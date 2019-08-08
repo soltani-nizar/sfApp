@@ -15,7 +15,8 @@ pipeline{
     stage('SonarQube'){
       steps{
         echo "=== Starting SonarQube Analysis ==="
-        bat "sonar-scanner"
+        withSonarQubeEnv('SonarQube v7.9.1')
+                        {bat 'sonar-scanner'}
         echo "=== Ending SonarQube Analysis ==="
       }
     }
