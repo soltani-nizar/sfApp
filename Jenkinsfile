@@ -15,7 +15,7 @@ pipeline{
     stage('SonarQube'){
       steps{
         echo "=== Starting SonarQube Analysis ==="
-        bat "sonar-scanner"
+        sonar-scanner
         echo "=== Ending SonarQube Analysis ==="
       }
     }
